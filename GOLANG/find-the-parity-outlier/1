@@ -1,0 +1,39 @@
+package main
+
+import (
+	"fmt"
+)
+
+func FindOutlier(integers []int) int {
+    m := make(map[int] int)
+    for _, v := range(integers){
+        if v % 2 == 0{
+            m[v]++
+        } else{
+            m[v]++
+        }
+
+    }
+
+    for _, v := range(m){
+        fmt.Println("VAL: ", v)
+    }
+
+    for key, v := range(m){
+        if m[v] > 1{
+            return m[v]
+        } else if m[v] > 1{
+            return m[v]
+        }
+    }
+
+
+    return 0xDEADBEEF
+}
+
+func main() {
+	res := FindOutlier([]int{2, 6, 8, -10, 3}) //Should equal 3
+
+	fmt.Println("Res: ", res)
+
+}
