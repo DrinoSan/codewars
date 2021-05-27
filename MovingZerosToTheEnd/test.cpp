@@ -11,6 +11,7 @@ std::vector<int> move_zeroes(const std::vector<int>& input) {
         }
     }
 
+
     for(auto el : res){
         cout << el << " " << endl;
     }

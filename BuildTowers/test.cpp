@@ -18,7 +18,6 @@ int main(){
         s[mid - i] = '*';
         s[mid + i] = '*';
         res.push_back(s);
-
     }
 
     for (auto& el : res){
