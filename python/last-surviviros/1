@@ -1,0 +1,19 @@
+def last_surivors(string):
+    for i in range(len(string)-1):
+        if string.count(string[i]) > 1:
+            if ord(string[i]) == 122:
+                string = string.replace(string[i], chr(97), 1)
+                string = string.replace(string[i], "", 1)
+            string = string.replace(string[i], "", 1)
+            string = string.replace(string[i], chr(ord(string[i])+1))
+
+    print(string)
+
+
+
+
+
+
+last_surivors("zzzab")
+
+

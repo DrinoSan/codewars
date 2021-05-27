@@ -1,0 +1,12 @@
+def f(iterable, integer):
+    if length := len(iterable) > integer:
+        return length
+    else:
+        return 0
+
+
+
+
+
+f("abc",2)
+
