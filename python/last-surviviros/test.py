@@ -31,5 +31,3 @@ def last_surivors(string):
 
 
 print(last_surivors("abzz"))
-
-
