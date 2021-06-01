@@ -1,0 +1,61 @@
+def smallest(n):
+    x = [int(i) for i in str(n)]
+    res = list()
+
+
+
+    smallest_index = x[::-1].index(min(x[1:]))
+    smallest_index = len(x)-1-smallest_index
+    if x[smallest_index - 1] == 0:
+        smallest_index -= 1
+    smallest_number = x[smallest_index]
+    j = 0
+    if x[1] == 0:
+        for i in range(2, len(x)):
+            if x[i] > x[0]:
+                print(x[i])
+                x.insert(i-1, x[0])
+                x.remove(x[0])
+                strings = [str(i) for i in x]
+                a_string = "".join(strings)
+                ints = int(a_string)
+                j = i+2
+                print("HIER")
+                return [ints, 0, 1]
+
+    for i in range(len(x)):
+        if smallest_number == 0 and smallest_index == 1:
+            x.remove(x[smallest_index])
+            x.insert(i, smallest_number)
+            strings = [str(i) for i in x]
+            a_string = "".join(strings)
+            ints = int(a_string)
+            j = i
+            return [ints, 0, 1]
+        elif smallest_number == x[i]:
+            del x[smallest_index]
+            x.insert(i, smallest_number)
+            j = i
+            print("HEY")
+            break
+
+        elif smallest_number < x[i]:
+            del x[smallest_index]
+            x.insert(i, smallest_number)
+            j = i
+            break
+
+
+
+
+    strings = [str(i) for i in x]
+    a_string = "".join(strings)
+    ints = int(a_string)
+    print("FINAL: ", smallest_index)
+    return [ints, smallest_index, j]
+
+
+
+print(smallest(601567991046749982))
+#[15667991046749982, 0, 3]
+#[119989884756, 4, 0]

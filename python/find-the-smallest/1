@@ -1,0 +1,36 @@
+def smallest(n):
+    x = [int(i) for i in str(n)]
+    res = list()
+
+
+
+    smallest_index = x.index(min(x[1:]))
+    smallest_number = x[smallest_index]
+    for i in range(len(x)):
+        if smallest_number == 0 and smallest_index == 1:
+            x.remove(x[smallest_index])
+            x.insert(i, smallest_number)
+            strings = [str(i) for i in x]
+            a_string = "".join(strings)
+            ints = int(a_string)
+
+            
+
+        elif smallest_number < x[i]:
+            x.remove(x[smallest_index])
+            x.insert(i, smallest_number)
+            j = i
+            break
+
+
+
+
+    strings = [str(i) for i in x]
+    a_string = "".join(strings)
+    ints = int(a_string)
+    return [ints, smallest_index, j]
+
+
+
+print(smallest(296837))
+# [126235, 2, 0]);
