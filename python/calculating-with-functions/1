@@ -1,0 +1,42 @@
+
+
+
+
+# def five(f=None): if f == None return 5 else return #your code here
+
+# def seven(f=None): if f == None return 7 else 
+
+# def times(f): return "*" +str(f)#your code here
+
+
+# seven(times(five()))
+# print(times(five()))
+
+
+
+def zero(f=None):
+    if f == None:
+        print("IN P ohne f")
+        return 1
+    else:
+        print("IN P mit f")
+        print (f)
+        return f
+
+def one(f=None):
+    if f == None:
+        print("In O ohne f")
+        return 2
+    else:
+        print("IN O mit f")
+        return f
+
+
+def m(f):
+    print("IN M")
+    print("f in m", f)
+    return 3
+
+
+
+zero(m(one()))

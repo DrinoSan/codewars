@@ -1,0 +1,17 @@
+def valid_parentheses(string):
+    
+    stack = [c for c in string if c == "(" or c == ")"]
+    counter = 0
+    for c in stack:
+        if c == "(":
+            counter += 1
+        elif c == ")":
+            counter -= 1
+        
+
+
+
+
+
+
+print(valid_parentheses("())(()"))
